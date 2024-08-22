@@ -182,3 +182,8 @@ trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 psql -U postgres < universe.sql
 psql --username=freecodecamp --dbname=universe
+pg_dump -cC --inserts -U freecodecamp universe > universe.sql
+ls --color=auto -a
+ls --color=auto -l universe.sql
+git status
+git add .
